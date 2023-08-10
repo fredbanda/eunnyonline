@@ -36,6 +36,7 @@ gem "redis", "~> 4.0"
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
 
+gem "dotenv-rails"
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 # gem "bcrypt", "~> 3.1.7"
 
@@ -47,7 +48,7 @@ gem "bootsnap", require: false
 
 # Use Sass to process CSS
 # gem "sassc-rails"
-
+gem 'stripe', '~> 8.6'
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 gem "image_processing", "~> 1.2"
 
@@ -62,6 +63,7 @@ group :development do
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
+  gem "foreman"
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
@@ -73,9 +75,8 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
-gem "devise", "~> 4.8", ">= 4.8.1"
-gem "friendly_id", "~> 5.4", ">= 5.4.2"
-gem "cssbundling-rails"
-gem "name_of_person"
-gem "sidekiq", "~> 6.5", ">= 6.5.4"
-gem "stripe"
+  gem "devise", "~> 4.8", ">= 4.8.1"
+  gem "friendly_id", "~> 5.4", ">= 5.4.2"
+  gem "name_of_person"
+  gem "sidekiq", "~> 6.5", ">= 6.5.4"
+  gem "figaro"

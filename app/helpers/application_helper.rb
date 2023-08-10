@@ -57,6 +57,13 @@ module ApplicationHelper
     end
   end
 
+  def rescued_csrf_meta_tags
+    csrf_meta_tags
+  rescue ArgumentError
+    request.reset_session
+    csrf_meta_tags
+  end
+
   def style_button(variant, theme)
     base = "rounded text-center font-sans font-normal outline-none leading-normal cursor-pointer transition ease-in-out duration-200 font-medium"
 

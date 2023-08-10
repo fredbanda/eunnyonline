@@ -8,9 +8,9 @@
       <%= render "shared/flash_notice" %>
       <%= render "shared/navbar" %>
     </header>
-
     <main class="flex-grow">
       <%= content_for?(:content) ? yield(:content) : yield %>
     </main>
+    <%= render "shared/footer" %>
   </body>
 </html>
